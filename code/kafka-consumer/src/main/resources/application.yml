@@ -1,0 +1,10 @@
+spring:
+  kafka:
+    bootstrap-servers: ${kafka_bootstrap_servers:localhost:9092}
+    consumer:
+      group-id: "tid"
+      key-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-serializer: org.apache.kafka.common.serialization.StringDeserializer
+kafka.consumer.input.topic: "EXAMPLE.INPUT"
+
+server.port: 8882

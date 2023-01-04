@@ -1,0 +1,11 @@
+spring:
+  kafka:
+    bootstrap-servers: ${kafka_bootstrap_servers:localhost:9092}
+    producer:
+      client-id: inputService
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      retries: 2
+kafka.producer.input.topic: "EXAMPLE.INPUT"
+
+server.port: 8881
